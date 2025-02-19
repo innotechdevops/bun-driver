@@ -15,6 +15,6 @@ type Config struct {
 	Loc          string
 }
 
-type BunDriver interface {
+type DBDriver interface {
 	Connect() *bun.DB
 }

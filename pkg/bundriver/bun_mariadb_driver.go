@@ -15,13 +15,13 @@ const MariaDefaultPort = 3306
 
 type MariaConfig Config
 
-type BunMariaDBDriver BunDriver
+type MariaDBDriver DBDriver
 
 type mariaDbDriver struct {
 	options *MariaConfig
 }
 
-func NewMariaDBDriver(options *MariaConfig) BunMariaDBDriver {
+func NewMariaDBDriver(options *MariaConfig) MariaDBDriver {
 	return &mariaDbDriver{
 		options: options,
 	}

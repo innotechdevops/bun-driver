@@ -22,7 +22,7 @@ type PostgresConfig struct {
 	Application string // application_name
 }
 
-type BunPostgresDBDriver BunDriver
+type PostgresDBDriver DBDriver
 
 type postgresDriver struct {
 	options *PostgresConfig
@@ -86,7 +86,7 @@ func (d *postgresDriver) Connect() *bun.DB {
 	return bunDB
 }
 
-func NewPostgresDBDriver(options *PostgresConfig) BunPostgresDBDriver {
+func NewPostgresDBDriver(options *PostgresConfig) PostgresDBDriver {
 	return &postgresDriver{
 		options: options,
 	}
